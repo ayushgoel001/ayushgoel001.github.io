@@ -1,40 +1,300 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ayush Goel</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ayush Goel — Software Engineer | ML & Computer Vision</title>
+
+  <meta name="description"
+        content="Ayush Goel — Undergraduate at IIT Kharagpur. Software Engineering, Machine Learning, Computer Vision, Robotics, Research & Industry Projects."/>
+
+  <style>
+    :root{
+      --bg:#0b0d12;
+      --text:#e6eef6;
+      --muted:#9fb0c3;
+      --accent:#2fb3ff;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#0f1116,#0b0d12);
+      color:var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height:1.65;
+    }
+
+    a{color:var(--accent);text-decoration:none}
+    h1,h2,h3{margin:0}
+
+    .wrap{
+      max-width:var(--maxw);
+      margin:40px auto;
+      padding:28px;
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:32px;
+    }
+
+    /* LEFT COLUMN */
+    .left{
+      text-align:center;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .avatar{
+      width:200px;height:200px;
+      margin:0 auto;
+      border-radius:50%;
+      overflow:hidden;
+      border:5px solid rgba(47,179,255,.15);
+      box-shadow:0 18px 40px rgba(0,0,0,.7);
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover}
+
+    .name{font-size:26px;color:var(--accent)}
+    .title{font-size:14px;color:var(--muted)}
+    .inst{font-size:13px;color:var(--muted);font-weight:600}
+
+    .email{font-size:13px;color:var(--muted);word-break:break-all}
+
+    .links{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:6px;
+    }
+    .links a{
+      border:1px solid rgba(255,255,255,.05);
+      padding:7px 10px;
+      border-radius:8px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .nav{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+    }
+    .nav a{
+      border:1px solid rgba(255,255,255,.05);
+      padding:7px 10px;
+      border-radius:8px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* RIGHT COLUMN */
+    .section{
+      margin-bottom:26px;
+    }
+    .section h2{
+      font-size:22px;
+      margin-bottom:8px;
+    }
+    .lead{
+      color:var(--muted);
+      font-size:15px;
+      max-width:75ch;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px;
+    }
+    .skill{
+      font-size:13px;
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.05);
+      color:var(--muted);
+    }
+
+    .entry{
+      padding:14px 0;
+      border-bottom:1px dashed rgba(255,255,255,.05);
+    }
+    .entry:last-child{border-bottom:none}
+    .role{font-weight:700;color:var(--accent)}
+    .org{color:var(--muted);font-style:italic;font-size:14px}
+    ul{margin:8px 0 0 18px}
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+    .proj{
+      border:1px solid rgba(255,255,255,.05);
+      padding:12px;
+      border-radius:10px;
+    }
+    .proj h3{font-size:16px;color:var(--accent)}
+
+    footer{
+      grid-column:1/-1;
+      text-align:center;
+      font-size:13px;
+      color:var(--muted);
+      margin-top:24px;
+    }
+
+    @media(max-width:950px){
+      .wrap{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}
+    }
+  </style>
 </head>
+
 <body>
+<div class="wrap">
 
-  <header>
-    <h1>Ayush Goel</h1>
-    <p>Computer Vision | Machine Learning | Research</p>
-  </header>
+  <!-- LEFT -->
+  <div class="left">
+    <div class="avatar">
+      <img src="photo.jpg" alt="Ayush Goel">
+    </div>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am a second-year undergraduate at IIT Kharagpur, 
-      interested in Computer Vision, Deep Learning, and AI research.
-    </p>
-  </section>
+    <div class="name">Ayush Goel</div>
+    <div class="title">Software Engineer · ML & Computer Vision</div>
+    <div class="inst">IIT Kharagpur · Chemical Engineering (AI Micro-Spl.)</div>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li>Cheat Detection System (YOLOv8 + MediaPipe)</li>
-      <li>Object Tracking Drone</li>
-      <li>YOLO + ByteTrack Integration</li>
-    </ul>
-  </section>
+    <div class="email">
+      <a href="mailto:ayushgoel2005@kgpian.iitkgp.ac.in">ayushgoel2005@kgpian.iitkgp.ac.in</a>
+    </div>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: ayush@example.com</p>
-    <p>GitHub: github.com/ayushgoel</p>
-    <p>LinkedIn: linkedin.com/in/ayushgoel</p>
-  </section>
+    <div class="links">
+      <a href="https://github.com/" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+      <a href="resume.pdf" target="_blank">Resume (PDF)</a>
+    </div>
 
+    <div class="nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="main">
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h2>About Me</h2>
+      <p class="lead">
+        I am a second-year undergraduate at <strong>IIT Kharagpur</strong>, pursuing B.Tech (Honours) in Chemical Engineering with a Micro-Specialization in Artificial Intelligence and Applications. My interests lie at the intersection of <strong>software engineering, machine learning, computer vision, and robotics</strong>.
+      </p>
+      <p class="lead">
+        I enjoy building end-to-end systems — from mathematical modeling and algorithms to scalable implementations — and I am particularly interested in ML-driven perception, reinforcement learning, and intelligent autonomous systems.
+      </p>
+
+      <div class="skills">
+        <span class="skill">C++</span>
+        <span class="skill">Python</span>
+        <span class="skill">Machine Learning</span>
+        <span class="skill">Computer Vision</span>
+        <span class="skill">Reinforcement Learning</span>
+        <span class="skill">YOLO</span>
+        <span class="skill">OpenCV</span>
+        <span class="skill">ROS</span>
+        <span class="skill">Gazebo</span>
+        <span class="skill">SQL</span>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="role">Machine Learning Intern — Chi SquareX</div>
+        <div class="org">Dec 2024 – Jan 2025 · Remote</div>
+        <ul>
+          <li>Built an RL-compatible trading environment using OpenAI Gymnasium with a well-defined state–action space.</li>
+          <li>Trained PPO and A2C agents using reward functions based on real profit/loss dynamics.</li>
+          <li>Designed object-oriented option-strategy simulators and a Streamlit GUI for live evaluation.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="role">Undergraduate Researcher — Aerial Robotics Research Group</div>
+        <div class="org">IIT Kharagpur · May 2024 – Sep 2025</div>
+        <ul>
+          <li>Implemented real-time human detection using MediaPipe FaceMesh for aerial perception.</li>
+          <li>Integrated YOLOv8 for obstacle and target detection in autonomous drone systems.</li>
+          <li>Built an Iris drone simulation in Gazebo using MAVROS velocity control.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <h2>Selected Projects</h2>
+      <div class="projects">
+
+        <div class="proj">
+          <h3>Vision-Guided Exam Surveillance System</h3>
+          <p class="lead">
+            Real-time cheat detection using YOLOv8, facial landmarks, pupil tracking, and multithreaded OpenCV pipelines.
+          </p>
+        </div>
+
+        <div class="proj">
+          <h3>Intelligent Path Planning (PRM + A*)</h3>
+          <p class="lead">
+            Implemented Probabilistic Roadmap and A* search with KD-Tree neighbor querying for collision-free motion planning.
+          </p>
+        </div>
+
+        <div class="proj">
+          <h3>Rubik’s Cube Solver</h3>
+          <p class="lead">
+            High-performance C++ solver using BFS, IDDFS, and Korf’s IDA* achieving sub-second solutions.
+          </p>
+        </div>
+
+        <div class="proj">
+          <h3>Stereo Vision Depth Estimation</h3>
+          <p class="lead">
+            Custom disparity and depth estimation pipeline using calibrated monocular cameras.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="section" id="achievements">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Top 1% in JEE Main (2023) among 1.2M+ candidates</li>
+        <li>Top 5% in JEE Advanced (2023)</li>
+        <li>Global Rank 197 / 6000+ — NK Securities Research Hackathon 2025</li>
+        <li>Top 50 teams — Pan-IIT AI/ML Hackathon (IIT Guwahati)</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    © <span id="y"></span> Ayush Goel · GitHub Pages
+  </footer>
+</div>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
