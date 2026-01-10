@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ayush Goel — Software Engineer | AI & Computer Vision</title>
-  <meta name="description" content="Ayush Goel — Software Engineer & ML Specialist at IIT Kharagpur. Expertise in C++, Algorithms, Robotics, and AI Systems." />
+  <meta name="description" content="Ayush Goel — Software Engineer & ML Researcher at IIT Kharagpur. Specialized in C++, Robotics, and Reinforcement Learning." />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
@@ -55,6 +55,7 @@
       overflow: hidden;
       border: 1px solid var(--border);
     }
+
     .avatar img { width: 100%; height: 100%; object-fit: cover; }
 
     .identity h1 {
@@ -62,6 +63,7 @@
       margin: 0;
       color: var(--accent);
     }
+
     .tagline { color: var(--muted); font-size: 15px; }
 
     .stats {
@@ -86,6 +88,7 @@
       text-decoration: none;
       border-radius: 8px;
     }
+
     .nav-menu a:hover {
       color: var(--accent);
       background: var(--card-bg);
@@ -105,9 +108,7 @@
       text-align: center;
     }
 
-    .section {
-      margin-bottom: 50px;
-    }
+    .section { margin-bottom: 50px; }
 
     .section-title {
       font-size: 14px;
@@ -165,7 +166,7 @@
   <aside class="left">
 
     <div class="avatar">
-      <img src="images.png" alt="Ayush Goel">
+      <img src="assets/images/photo.jpg" alt="Ayush Goel">
     </div>
 
     <div class="identity">
@@ -188,19 +189,15 @@
     </div>
 
     <div class="social-links">
-      <a href="https://github.com/ayushgoel001" target="_blank" class="social-btn" title="GitHub">GitHub</a>
-      <a href="https://www.linkedin.com/in/ayush-goel-4b6469297/" target="_blank" class="social-btn" title="LinkedIn">LinkedIn</a>
+      <a href="https://github.com/ayushgoel001" target="_blank" class="social-btn">GitHub</a>
+      <a href="https://www.linkedin.com/in/ayush-goel-4b6469297/" target="_blank" class="social-btn">LinkedIn</a>
     </div>
 
     <div class="card" style="text-align:center;">
-      <a href="Ayush_Goel_CV.pdf" target="_blank"
-         style="display:inline-block;
-                padding:12px 18px;
-                font-weight:600;
-                color:#0b0d12;
-                background:var(--accent);
-                border-radius:10px;
-                text-decoration:none;">
+      <a href="assets/docs/Ayush_Goel_Resume.pdf" target="_blank"
+         style="display:inline-block;padding:12px 18px;font-weight:600;
+                color:#0b0d12;background:var(--accent);
+                border-radius:10px;text-decoration:none;">
         📄 View Resume
       </a>
     </div>
@@ -209,34 +206,66 @@
 
   <main>
 
+    <!-- ABOUT -->
     <section id="about" class="section">
       <h2 class="section-title">Overview</h2>
       <p style="color:var(--muted); max-width:70ch;">
         I am a third-year undergraduate student in the <strong>Department of Chemical Engineering</strong>
         at <strong>IIT Kharagpur</strong>, pursuing a <strong>Micro-Specialization in Artificial Intelligence</strong>.
-        My strengths lie in <strong>software engineering, algorithms, and system design</strong>, with active work
-        in <strong>AI/ML and computer vision</strong>.
+        My core strength lies in <strong>software engineering, algorithms, and system design</strong>,
+        complemented by active work in <strong>AI/ML and computer vision</strong>.
       </p>
     </section>
 
+    <!-- RESUME -->
     <section id="resume" class="section">
       <h2 class="section-title">Resume</h2>
       <div class="card">
-        <p style="color:var(--muted);">
-          A concise summary of my academic background, engineering projects,
-          and AI/ML experience.
+        <p style="color:var(--muted); max-width:65ch;">
+          A detailed overview of my academic background, software engineering experience,
+          research work, and AI/ML projects.
         </p>
-        <a href="Ayush_Goel_CV.pdf" target="_blank" class="tag">View PDF</a>
-        <a href="Ayush_Goel_CV.pdf" download class="tag">Download</a>
+        <div style="margin-top:16px;">
+          <a href="assets/docs/Ayush_Goel_Resume.pdf" target="_blank" class="tag">View PDF</a>
+          <a href="assets/docs/Ayush_Goel_Resume.pdf" download class="tag">Download</a>
+        </div>
       </div>
     </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="section-title">Selected Engineering Projects</h2>
+
+      <div class="card">
+        <h3>Rubik’s Cube Solver (C++)</h3>
+        <p style="color:var(--muted);">
+          Implemented a high-performance 3×3 solver using <strong>Korf’s IDA*</strong>
+          with advanced OOP design and optimized state-space search.
+        </p>
+        <span class="tag">C++</span>
+        <span class="tag">Algorithms</span>
+        <span class="tag">Graph Search</span>
+      </div>
+
+      <div class="card">
+        <h3>Vision-Based Surveillance System</h3>
+        <p style="color:var(--muted);">
+          Real-time cheat detection pipeline integrating <strong>YOLOv8</strong>,
+          <strong>facial landmark tracking</strong>, and multithreaded OpenCV processing.
+        </p>
+        <span class="tag">Computer Vision</span>
+        <span class="tag">YOLOv8</span>
+        <span class="tag">Multithreading</span>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
     <section id="achievements" class="section">
       <h2 class="section-title">Recognition</h2>
       <div class="card">
-        <p>🏆 Global Rank 197 / 6000+ — NK Securities Research Hackathon</p>
-        <p>🎖️ Top 1% JEE Main · Top 5% JEE Advanced</p>
-        <p>🚀 Top 50 — Pan-IIT AI/ML Hackathon</p>
+        <p> Global Rank 197 / 6000+ — NK Securities Research Hackathon</p>
+        <p> Top 1% JEE Main · Top 5% JEE Advanced</p>
+        <p> Top 50 — Pan-IIT AI/ML Hackathon</p>
       </div>
     </section>
 
