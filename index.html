@@ -54,11 +54,8 @@ overflow: hidden;
 border: 1px solid var(--border);
 box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
-.avatar img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+
 .identity h1 {
 font-size: 28px;
 margin: 0;
@@ -120,6 +117,9 @@ border-radius: 8px;
 background: var(--card-bg);
 border: 1px solid var(--border);
 text-align: center;
+font-size: 13px;
+text-decoration: none;
+color: var(--text);
 transition: 0.2s;
 }
 .social-btn:hover {
@@ -127,7 +127,6 @@ border-color: var(--accent);
 background: rgba(47, 179, 255, 0.05);
 }
 
-/* Resume Button */
 .resume-btn {
 margin-top: 12px;
 padding: 12px;
@@ -164,11 +163,8 @@ height: 1px;
 flex-grow: 1;
 background: var(--border);
 }
-.about-text {
-font-size: 16px;
-color: var(--muted);
-max-width: 70ch;
-}
+
+.about-text { font-size: 16px; color: var(--muted); max-width: 75ch; }
 .about-text strong { color: var(--text); }
 
 .card {
@@ -183,6 +179,14 @@ transition: 0.3s;
 border-color: rgba(47, 179, 255, 0.4);
 transform: translateY(-2px);
 }
+
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.role-title { font-size: 18px; font-weight: 700; color: var(--text); }
+.org-meta { color: var(--accent); font-size: 14px; font-weight: 600; }
+.date-badge { font-family: 'Fira Code', monospace; font-size: 11px; color: var(--muted); }
+
+ul.bullets { padding-left: 18px; margin: 12px 0; color: var(--muted); font-size: 15px; }
+ul.bullets li { margin-bottom: 8px; }
 
 .tech-stack {
 display: flex;
@@ -204,6 +208,9 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
 }
+
+.ach-item { display: flex; gap: 15px; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 15px; color: var(--muted); }
+.ach-icon { color: var(--accent); font-weight: bold; }
 
 footer {
 padding: 40px 0;
@@ -250,16 +257,11 @@ margin-top: 40px;
 </div>
 
 <div class="social-links">
-<a href="https://github.com/ayushgoel001" class="social-btn" title="GitHub">GitHub</a>
-<a href="www.linkedin.com/in/
-ayush-goel-4b6469297
-" class="social-btn" title="LinkedIn">LinkedIn</a>
+<a href="https://github.com/ayushgoel001" class="social-btn" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/ayush-goel-4b6469297" class="social-btn" target="_blank">LinkedIn</a>
 </div>
 
-<!-- RESUME BUTTON -->
-<a href="Ayush_Goel_Resume.pdf" class="resume-btn" target="_blank">
-View Resume
-</a>
+<a href="Ayush_Goel_Resume.pdf" class="resume-btn" target="_blank">View Resume</a>
 
 <div style="margin-top: 10px;">
 <a href="mailto:ayushgoel2005@kgpian.iitkgp.ac.in"
@@ -267,12 +269,120 @@ style="font-size: 12px; color: var(--muted); text-decoration: none; word-break: 
 ayushgoel2005@kgpian.iitkgp.ac.in
 </a>
 </div>
-
 </aside>
 
-<!-- MAIN CONTENT UNCHANGED -->
 <main class="main">
-<!-- (your existing sections remain exactly the same) -->
+    
+    <section class="section" id="about">
+      <h2 class="section-title">Overview</h2>
+      <div class="about-text">
+        <p>My name is <strong>Ayush Goel</strong> and I am a third-year undergraduate student from the <strong>Department of Chemical Engineering</strong> at <strong>IIT Kharagpur</strong>, pursuing a Micro-Specialization in <strong>Artificial Intelligence and Applications</strong>.</p>
+        <p>I bridge the gap between chemical process engineering and intelligent software systems. My expertise lies in building high-performance solutions using <strong>C++</strong>, developing <strong>Computer Vision</strong> pipelines, and architecting <strong>Reinforcement Learning</strong> environments.</p>
+      </div>
+      
+      <div class="tech-stack" style="margin-top:20px;">
+        <span class="tag">C++</span> <span class="tag">Python</span> <span class="tag">SQL</span> <span class="tag">PyTorch</span> 
+        <span class="tag">OpenCV</span> <span class="tag">ROS</span> <span class="tag">Gazebo</span> <span class="tag">SolidWorks</span>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <h2 class="section-title">Experience</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="role-title">Machine Learning Intern</div>
+            <div class="org-meta">Chi SquareX | Remote</div>
+          </div>
+          <span class="date-badge">Dec 2024 – Jan 2025</span>
+        </div>
+        <ul class="bullets">
+          <li>Built an RL-compatible trading environment using <strong>OpenAI Gymnasium</strong> with defined state/action spaces.</li>
+          <li>Trained agents using <strong>PPO and A2C</strong> algorithms based on profit/loss reward structures.</li>
+          <li>Developed Call Spread Butterfly strategy simulators using object-oriented design in Python.</li>
+          <li>Designed a <strong>Streamlit GUI</strong> to monitor and validate agent performance in market scenarios.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="role-title">Undergraduate Researcher</div>
+            <div class="org-meta">Aerial Robotics Research Group | IIT Kharagpur</div>
+          </div>
+          <span class="date-badge">May 2024 – Sep 2025</span>
+        </div>
+        <ul class="bullets">
+          <li>Engineered real-time human detection using <strong>MediaPipe FaceMesh</strong> for aerial footage tracking.</li>
+          <li>Integrated <strong>YOLOv8</strong> for target and obstacle detection in autonomous drone perception tasks.</li>
+          <li>Built drone simulations in <strong>Gazebo</strong> using MAVROS for precise velocity-based navigation.</li>
+          <li>Designed gradient-based edge detection and <strong>Hough Line Transform</strong> algorithms for noisy environments.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="projects-grid">
+        
+        <div class="card">
+          <h3>Rubik’s Cube Solver</h3>
+          <p style="font-size:14px; color:var(--muted);">High-performance C++ solver using <strong>Korf’s IDA* Algorithm</strong>. Features OOP principles, bitmasking, and achieves sub-10s solutions for complex scrambles.</p>
+          <div class="tech-stack">
+            <span class="tag">C++</span> <span class="tag">IDA*</span> <span class="tag">OOP</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Intelligent Path Planning</h3>
+          <p style="font-size:14px; color:var(--muted);">Implemented <strong>PRM (Probabilistic Roadmap)</strong> and <strong>A* Search</strong> using <strong>KD-Trees</strong> for collision-free navigation in 2D robotic environments.</p>
+          <div class="tech-stack">
+            <span class="tag">C++</span> <span class="tag">KD-Tree</span> <span class="tag">Algorithms</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Exam Surveillance System</h3>
+          <p style="font-size:14px; color:var(--muted);">Real-time monitoring using <strong>YOLOv8</strong> and dlib’s 68-point model to track pupil orientation and detect mobile usage during exams.</p>
+          <div class="tech-stack">
+            <span class="tag">Computer Vision</span> <span class="tag">Python</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Stereo Vision Depth Estimation</h3>
+          <p style="font-size:14px; color:var(--muted);">Built a custom depth estimation pipeline from scratch using two calibrated monocular cameras and template-matching algorithms.</p>
+          <div class="tech-stack">
+            <span class="tag">Stereo Geometry</span> <span class="tag">NumPy</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="achievements">
+      <h2 class="section-title">Achievements</h2>
+      <div class="card">
+        <div class="ach-item">
+          <span class="ach-icon">🏆</span>
+          <div><strong>Global Rank 197 / 6000+</strong> — NK Securities Research Hackathon 2025 (Volatility Modeling).</div>
+        </div>
+        <div class="ach-item">
+          <span class="ach-icon">🎯</span>
+          <div><strong>Top 1% Rank</strong> — JEE Main 2023 (among 1.2M candidates).</div>
+        </div>
+        <div class="ach-item">
+          <span class="ach-icon">🚀</span>
+          <div><strong>Top 50 Rank</strong> — Pan-IIT AI/ML Hackathon (Convolve 3.0) among 4,000+ teams.</div>
+        </div>
+        <div class="ach-item">
+          <span class="ach-icon">⭐</span>
+          <div><strong>Branch Change Merit</strong> — Secured top 10% rank among 1,800 first-year students at IITKGP.</div>
+        </div>
+      </div>
+    </section>
+
 </main>
 
 </div>
