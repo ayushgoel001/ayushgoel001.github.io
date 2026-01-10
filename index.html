@@ -27,7 +27,41 @@ color: var(--text);
 font-family: 'Inter', -apple-system, sans-serif;
 line-height: 1.6;
 -webkit-font-smoothing: antialiased;
+padding-top: 70px; /* Offset for sticky header */
 }
+
+/* --- Top Navigation Header --- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: rgba(11, 13, 18, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header nav {
+  display: flex;
+  gap: 30px;
+}
+.header nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.header nav a:hover {
+  color: var(--accent);
+}
+
 .wrap {
 max-width: var(--maxw);
 margin: 40px auto;
@@ -40,7 +74,7 @@ gap: 40px;
 /* --- Left Sidebar --- */
 .left {
 position: sticky;
-top: 40px;
+top: 110px;
 height: fit-content;
 display: flex;
 flex-direction: column;
@@ -84,35 +118,20 @@ margin-bottom: 8px;
 .stat-label { color: var(--muted); }
 .stat-value { color: var(--text); font-weight: 600; }
 
-.nav-menu {
-display: flex;
-flex-direction: column;
-gap: 8px;
-margin-top: 10px;
+/* --- Action Button Group in Sidebar --- */
+.action-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
 }
-.nav-menu a {
-color: var(--muted);
-text-decoration: none;
-font-size: 14px;
-padding: 8px 12px;
-border-radius: 8px;
-transition: 0.2s;
-border: 1px solid transparent;
-}
-.nav-menu a:hover {
-color: var(--accent);
-background: var(--card-bg);
-border-color: var(--border);
-}
-
-.social-links {
-display: flex;
-gap: 12px;
-margin-top: 10px;
+.social-row {
+  display: flex;
+  gap: 10px;
 }
 .social-btn {
 flex: 1;
-padding: 10px;
+padding: 12px;
 border-radius: 8px;
 background: var(--card-bg);
 border: 1px solid var(--border);
@@ -121,18 +140,19 @@ font-size: 13px;
 text-decoration: none;
 color: var(--text);
 transition: 0.2s;
+font-weight: 500;
 }
 .social-btn:hover {
 border-color: var(--accent);
 background: rgba(47, 179, 255, 0.05);
+transform: translateY(-2px);
 }
 
 .resume-btn {
-margin-top: 12px;
-padding: 12px;
+padding: 14px;
 text-align: center;
 font-size: 14px;
-font-weight: 600;
+font-weight: 700;
 border-radius: 10px;
 background: linear-gradient(135deg, #2fb3ff, #1d8ed8);
 color: #02131f;
@@ -175,10 +195,7 @@ border-radius: 16px;
 margin-bottom: 20px;
 transition: 0.3s;
 }
-.card:hover {
-border-color: rgba(47, 179, 255, 0.4);
-transform: translateY(-2px);
-}
+.card:hover { border-color: rgba(47, 179, 255, 0.4); transform: translateY(-2px); }
 
 .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
 .role-title { font-size: 18px; font-weight: 700; color: var(--text); }
@@ -188,41 +205,20 @@ transform: translateY(-2px);
 ul.bullets { padding-left: 18px; margin: 12px 0; color: var(--muted); font-size: 15px; }
 ul.bullets li { margin-bottom: 8px; }
 
-.tech-stack {
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
-margin-top: 16px;
-}
-.tag {
-font-family: 'Fira Code', monospace;
-font-size: 11px;
-color: var(--accent);
-background: rgba(47,179,255,0.1);
-padding: 4px 10px;
-border-radius: 4px;
-}
+.tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.tag { font-family: 'Fira Code', monospace; font-size: 11px; color: var(--accent); background: rgba(47,179,255,0.1); padding: 4px 10px; border-radius: 4px; }
 
-.projects-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 20px;
-}
+.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 
 .ach-item { display: flex; gap: 15px; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 15px; color: var(--muted); }
 .ach-icon { color: var(--accent); font-weight: bold; }
 
-footer {
-padding: 40px 0;
-text-align: center;
-font-size: 13px;
-color: var(--muted);
-border-top: 1px solid var(--border);
-margin-top: 40px;
-}
+footer { padding: 40px 0; text-align: center; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 40px; }
 
 @media (max-width: 900px) {
-.wrap { grid-template-columns: 1fr; }
+.header nav { gap: 15px; }
+.header nav a { font-size: 12px; }
+.wrap { grid-template-columns: 1fr; margin-top: 20px; }
 .left { position: relative; top: 0; align-items: center; text-align: center; }
 .projects-grid { grid-template-columns: 1fr; }
 }
@@ -230,6 +226,15 @@ margin-top: 40px;
 </head>
 
 <body>
+
+<header class="header">
+  <nav>
+    <a href="#about">01. About</a>
+    <a href="#experience">02. Experience</a>
+    <a href="#projects">03. Projects</a>
+    <a href="#achievements">04. Recognition</a>
+  </nav>
+</header>
 
 <div class="wrap">
 <aside class="left">
@@ -249,25 +254,18 @@ margin-top: 40px;
 <div class="stat-item"><span class="stat-label">Graduation</span><span class="stat-value">2027</span></div>
 </div>
 
-<div class="nav-menu">
-<a href="#about">01. About</a>
-<a href="#experience">02. Experience</a>
-<a href="#projects">03. Projects</a>
-<a href="#achievements">04. Recognition</a>
-</div>
+<div class="action-group">
+  <div class="social-row">
+    <a href="https://github.com/ayushgoel001" class="social-btn" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/ayush-goel-4b6469297" class="social-btn" target="_blank">LinkedIn</a>
+  </div>
+  
+  <a href="assets/Ayush_Goel_Resume.pdf" class="resume-btn" target="_blank">View Resume</a>
 
-<div class="social-links">
-<a href="https://github.com/ayushgoel001" class="social-btn" target="_blank">GitHub</a>
-<a href="https://www.linkedin.com/in/ayush-goel-4b6469297" class="social-btn" target="_blank">LinkedIn</a>
-</div>
-
-<a href="assets/Ayush_Goel_Resume.pdf" class="resume-btn" target="_blank">View Resume</a>
-
-<div class="social-links" style="margin-top: 10px; flex-direction: column;">
   <a href="mailto:ayushgoel2005@kgpian.iitkgp.ac.in" class="social-btn" title="College Email">
     College Email
   </a>
-  <a href="mailto:goel85360@gmail.com" class="social-btn" title="Personal Email">
+  <a href="mailto:ayushgoel.personal@gmail.com" class="social-btn" title="Personal Email">
     Personal Email
   </a>
 </div>
@@ -367,30 +365,24 @@ margin-top: 40px;
 <section class="section" id="achievements">
   <h2 class="section-title">Achievements</h2>
   <div class="card">
-
     <div class="ach-item">
       <span class="ach-icon">•</span>
       <div><strong>Global Rank 197 / 6000+</strong> — NK Securities Research Hackathon 2025 (Volatility Modeling).</div>
     </div>
-
     <div class="ach-item">
       <span class="ach-icon">•</span>
       <div><strong>Top 1% Rank</strong> — JEE Main 2023 (among 1.2M candidates).</div>
     </div>
-
     <div class="ach-item">
       <span class="ach-icon">•</span>
       <div><strong>Top 50 Rank</strong> — Pan-IIT AI/ML Hackathon (Convolve 3.0) among 4,000+ teams.</div>
     </div>
-
     <div class="ach-item">
       <span class="ach-icon">•</span>
       <div><strong>Branch Change Merit</strong> — Secured top 10% rank among 1,800 first-year students at IITKGP.</div>
     </div>
-
   </div>
 </section>
-
 
 </main>
 
