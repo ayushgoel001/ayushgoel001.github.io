@@ -2,290 +2,220 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Ayush Goel | Software & AI Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush Goel | Software Engineer & ML Researcher</title>
-    <meta name="description" content="Portfolio of Ayush Goel, IIT Kharagpur. Specialized in Software Engineering, Computer Vision, and Robotics.">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    
+
     <style>
-        :root {
-            --bg: #05070a;
-            --card-bg: #0f121a;
-            --accent: #3b82f6; /* Modern Blue */
-            --accent-glow: rgba(59, 130, 246, 0.5);
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --border: rgba(255, 255, 255, 0.08);
-            --font-sans: 'Inter', -apple-system, sans-serif;
-            --font-mono: 'Fira Code', monospace;
-        }
-
-        * { box-sizing: border-box; scroll-behavior: smooth; }
-
         body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            font-family: var(--font-sans);
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
+            background-color: #0f172a;
+            color: #e5e7eb;
             line-height: 1.6;
         }
-
-        /* --- Layout --- */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        a {
+            color: #38bdf8;
+            text-decoration: none;
         }
-
         header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border-bottom: 1px solid var(--border);
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #1e293b, #020617);
         }
-
-        section { padding: 80px 0; }
-
-        /* --- Typography --- */
-        h1, h2, h3 { font-weight: 700; margin: 0; }
-        .mono { font-family: var(--font-mono); color: var(--accent); font-size: 0.9rem; margin-bottom: 1rem; display: block; }
-        .hero-name { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 1rem; }
-        .hero-tagline { font-size: clamp(1.2rem, 3vw, 1.8rem); color: var(--text-muted); max-width: 700px; }
-        .section-title { font-size: 2rem; margin-bottom: 3rem; display: flex; align-items: center; gap: 15px; }
-        .section-title::after { content: ""; height: 1px; flex-grow: 1; background: var(--border); }
-
-        /* --- Navigation --- */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(5, 7, 10, 0.8);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-            border-bottom: 1px solid var(--border);
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
         }
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: auto;
         }
-        .nav-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            margin-left: 30px;
-            font-size: 0.9rem;
-            font-family: var(--font-mono);
-            transition: color 0.3s;
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 50px 20px;
         }
-        .nav-links a:hover { color: var(--accent); }
-
-        /* --- Buttons & Links --- */
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            border: 1px solid var(--accent);
-            color: var(--accent);
-            text-decoration: none;
-            border-radius: 4px;
-            font-family: var(--font-mono);
-            margin-top: 2rem;
-            transition: all 0.3s;
+        h2 {
+            border-bottom: 2px solid #38bdf8;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+            color: #f8fafc;
         }
-        .btn:hover { background: rgba(59, 130, 246, 0.1); box-shadow: 0 0 20px var(--accent-glow); }
-
-        /* --- Experience & Projects Grid --- */
-        .grid { display: grid; gap: 2rem; }
+        ul {
+            padding-left: 20px;
+        }
         .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 2rem;
-            border-radius: 12px;
-            transition: transform 0.3s, border-color 0.3s;
+            background-color: #020617;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
         }
-        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
-
-        .tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1rem; }
-        .tag {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            background: rgba(255,255,255,0.05);
-            padding: 4px 10px;
-            border-radius: 4px;
-            color: var(--text-muted);
+        .tags span {
+            background: #1e293b;
+            padding: 5px 10px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 5px;
+            font-size: 0.85rem;
         }
-
-        .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem; }
-        .exp-company { color: var(--accent); font-size: 1.2rem; font-weight: 600; }
-        .exp-date { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.85rem; }
-
-        /* --- Education & Skills --- */
-        .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
-        .skill-group h3 { font-size: 1rem; margin-bottom: 1rem; color: var(--text-main); border-left: 3px solid var(--accent); padding-left: 10px; }
-        .skill-group ul { list-style: none; padding: 0; color: var(--text-muted); font-size: 0.95rem; }
-        .skill-group li::before { content: "▹ "; color: var(--accent); }
-
-        footer { text-align: center; padding: 40px 0; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .exp-header { flex-direction: column; }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #020617;
+            font-size: 0.9rem;
         }
     </style>
 </head>
+
 <body>
 
-    <nav>
-        <div class="container nav-inner">
-            <div style="font-weight: 700; color: var(--accent);">AG.</div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
+<!-- ================= HERO ================= -->
+<header>
+    <h1>Ayush Goel</h1>
+    <p>
+        Software Engineer | Machine Learning & Computer Vision Enthusiast <br>
+        Undergraduate @ IIT Kharagpur
+    </p>
+    <p>
+        <a href="https://github.com/yourusername">GitHub</a> |
+        <a href="https://linkedin.com/in/yourlinkedin">LinkedIn</a> |
+        <a href="mailto:ayushgoel2005@kgpian.iitkgp.ac.in">Email</a>
+    </p>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section>
+    <h2>About Me</h2>
+    <p>
+        I am a B.Tech (Honours) student in Chemical Engineering with a Micro Specialization in Artificial Intelligence
+        and Applications at IIT Kharagpur. My primary interest lies in <b>software engineering, machine learning,
+        computer vision, and intelligent systems</b>.
+    </p>
+    <p>
+        I enjoy building systems from scratch — from algorithm design and data structures to deploying
+        end-to-end ML pipelines. I actively seek roles that involve <b>problem-solving, scalability,
+        and real-world impact</b>.
+    </p>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section>
+    <h2>Skills</h2>
+
+    <div class="card">
+        <b>Programming:</b>
+        <div class="tags">
+            <span>C++</span><span>C</span><span>Python</span><span>SQL</span>
         </div>
-    </nav>
-
-    <div class="container">
-        <header>
-            <span class="mono">Hi, my name is</span>
-            <h1 class="hero-name">Ayush Goel.</h1>
-            <h2 class="hero-tagline">I build robust software and intelligent systems.</h2>
-            <p style="max-width: 600px; color: var(--text-muted); margin-top: 1.5rem;">
-                Software Engineering undergraduate at <b>IIT Kharagpur</b>. Focused on C++, Algorithms, and Computer Vision. Currently exploring the intersection of robotics and machine learning.
-            </p>
-            <div>
-                <a href="mailto:ayushgoel2005@kgpian.iitkgp.ac.in" class="btn">Get In Touch</a>
-            </div>
-        </header>
-
-        <section id="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="grid" style="grid-template-columns: 1.5fr 1fr;">
-                <div>
-                    <p>I am a B.Tech (Hons) student at <b>IIT Kharagpur</b> (CGPA: 9.04) with a focus on Software Engineering and AI. My core strength lies in <b>C++ and Algorithmic Problem Solving</b>, backed by a top 1% rank in JEE Main.</p>
-                    <p>Whether it's building high-performance Rubik’s solvers or real-time aerial perception systems, I thrive on turning complex mathematical models into scalable code.</p>
-                    
-                    <div class="skills-container" style="margin-top: 2rem;">
-                        <div class="skill-group">
-                            <h3>Languages</h3>
-                            <ul><li>C++</li><li>Python</li><li>C</li><li>SQL</li></ul>
-                        </div>
-                        <div class="skill-group">
-                            <h3>Frameworks</h3>
-                            <ul><li>OpenCV</li><li>TensorFlow</li><li>ROS</li><li>OpenAI Gym</li></ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" style="height: fit-content;">
-                    <h3 style="font-size: 1rem; margin-bottom: 1rem;">Scholastic Achievements</h3>
-                    <ul style="padding: 0; list-style: none; font-size: 0.9rem; color: var(--text-muted);">
-                        <li style="margin-bottom: 10px;">🏆 <b>Top 1%</b> JEE Main (1.2M+ candidates)</li>
-                        <li style="margin-bottom: 10px;">🏆 <b>Top 5%</b> JEE Advanced</li>
-                        <li style="margin-bottom: 10px;">📈 <b>9.04 CGPA</b> @ IIT Kharagpur</li>
-                        <li style="margin-bottom: 10px;">🏅 <b>Rank 197</b> Global - NK Securities Hackathon</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2 class="section-title">Experience</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="exp-header">
-                        <span class="exp-company">Machine Learning Intern @ Chi SquareX</span>
-                        <span class="exp-date">Dec 2024 — Jan 2025</span>
-                    </div>
-                    <ul style="color: var(--text-muted); font-size: 0.95rem;">
-                        <li>Developed an <b>RL-compatible trading environment</b> using OpenAI Gymnasium for automated strategy execution.</li>
-                        <li>Implemented <b>PPO and A2C algorithms</b> with custom reward functions based on PnL dynamics.</li>
-                        <li>Built an OOP-based option strategy simulator and a Streamlit GUI for real-time performance monitoring.</li>
-                    </ul>
-                    <div class="tag-list">
-                        <span class="tag">Reinforcement Learning</span><span class="tag">Python</span><span class="tag">Streamlit</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="exp-header">
-                        <span class="exp-company">Researcher @ Aerial Robotics Group</span>
-                        <span class="exp-date">May 2024 — Sep 2025</span>
-                    </div>
-                    <ul style="color: var(--text-muted); font-size: 0.95rem;">
-                        <li>Integrated <b>YOLOv8</b> for real-time target detection and <b>MediaPipe FaceMesh</b> for human perception in drone systems.</li>
-                        <li>Simulated autonomous navigation in <b>Gazebo/ROS</b> using MAVROS velocity control.</li>
-                        <li>Developed custom edge detection and Hough Transform algorithms for perception in noise-heavy environments.</li>
-                    </ul>
-                    <div class="tag-list">
-                        <span class="tag">C++</span><span class="tag">ROS</span><span class="tag">Computer Vision</span><span class="tag">Gazebo</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2 class="section-title">Selected Projects</h2>
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-                
-                <div class="card">
-                    <span class="mono">C++ / Algorithms</span>
-                    <h3>Rubik’s Cube Solver</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">High-performance solver using <b>IDA* (Korf's Algorithm)</b> and BFS/DFS. Optimized using bitboards and custom heuristics to achieve sub-10s solve times for complex scrambles.</p>
-                    <div class="tag-list">
-                        <span class="tag">OOP</span><span class="tag">Graph Theory</span><span class="tag">BFS/DFS</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <span class="mono">Robotics / Planning</span>
-                    <h3>Intelligent Path Planning</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Manual implementation of <b>PRM (Probabilistic Roadmap)</b> and <b>A* Algorithm</b>. Utilized <b>KD-Trees</b> for efficient neighbor querying in 2D collision-free space.</p>
-                    <div class="tag-list">
-                        <span class="tag">A*</span><span class="tag">KD-Tree</span><span class="tag">Motion Planning</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <span class="mono">Computer Vision</span>
-                    <h3>Parallel Stereo Vision</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Depth estimation pipeline built from scratch without standard CV libraries. Uses template matching and camera intrinsics for disparity mapping.</p>
-                    <div class="tag-list">
-                        <span class="tag">Stereo Geometry</span><span class="tag">NumPy</span><span class="tag">Mathematical Modeling</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <span class="mono">Deep Learning</span>
-                    <h3>Vision Surveillance System</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Real-time behavior monitoring using YOLOv8 and 68-point facial landmarks. Achieved 86.9% mAP for cheat detection.</p>
-                    <div class="tag-list">
-                        <span class="tag">PyTorch</span><span class="tag">Multithreading</span><span class="tag">OpenCV</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" style="text-align: center;">
-            <h2 class="section-title" style="justify-content: center;">Connect</h2>
-            <p>I'm currently looking for software engineering internships and research opportunities.</p>
-            <div style="margin-top: 2rem;">
-                <a href="https://github.com/your-github" class="mono" style="margin: 0 15px;">GitHub</a>
-                <a href="https://linkedin.com/in/your-linkedin" class="mono" style="margin: 0 15px;">LinkedIn</a>
-            </div>
-        </section>
     </div>
 
-    <footer>
-        Designed & Built by Ayush Goel &copy; <span id="year"></span>
-    </footer>
+    <div class="card">
+        <b>Machine Learning & AI:</b>
+        <div class="tags">
+            <span>Deep Learning</span><span>Computer Vision</span><span>Reinforcement Learning</span>
+            <span>YOLOv8</span><span>MediaPipe</span><span>XGBoost</span>
+        </div>
+    </div>
 
-    <script>
-        document.getElementById('year').innerText = new Date().getFullYear();
-    </script>
+    <div class="card">
+        <b>Tools & Systems:</b>
+        <div class="tags">
+            <span>Git & GitHub</span><span>OpenCV</span><span>ROS</span><span>Gazebo</span>
+            <span>Streamlit</span><span>Linux</span>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section>
+    <h2>Selected Projects (Software & AI)</h2>
+
+    <div class="card">
+        <h3>Vision-Guided Behavioral Monitoring System</h3>
+        <ul>
+            <li>Built a real-time cheat detection system using YOLOv8 and dlib facial landmarks</li>
+            <li>Tracked eye movements and head pose to detect suspicious behavior</li>
+            <li>Achieved <b>86.9% mAP@50</b> after fine-tuning on a custom dataset</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Intelligent Path Planning in 2D Robotic Environments</h3>
+        <ul>
+            <li>Implemented Probabilistic Roadmap (PRM) from scratch</li>
+            <li>Used KD-Tree neighbor querying and A* search for optimal path planning</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Rubik’s Cube Solver (C++)</h3>
+        <ul>
+            <li>Designed a complete object-oriented cube model</li>
+            <li>Implemented BFS, DFS, IDDFS, and Korf’s IDA*</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>RL-Based Algorithmic Trading System</h3>
+        <ul>
+            <li>Developed an OpenAI Gymnasium trading environment</li>
+            <li>Trained PPO and A2C agents with profit-based rewards</li>
+            <li>Built an interactive Streamlit dashboard</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section>
+    <h2>Research & Industry Experience</h2>
+
+    <div class="card">
+        <h3>Machine Learning Intern – Chi SquareX</h3>
+        <p><i>Dec 2024 – Jan 2025</i></p>
+        <ul>
+            <li>Designed an RL-compatible trading environment</li>
+            <li>Implemented option strategies with OOP design</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Undergraduate Researcher – Aerial Robotics Lab, IIT Kharagpur</h3>
+        <p><i>May 2024 – Sep 2025</i></p>
+        <ul>
+            <li>Real-time human detection using YOLOv8 and MediaPipe</li>
+            <li>Drone simulation using ROS, MAVROS, and Gazebo</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+<section>
+    <h2>Achievements</h2>
+    <ul>
+        <li>Top 1% in JEE Main (1.2M+ candidates)</li>
+        <li>Top 5% in JEE Advanced (200K candidates)</li>
+        <li>Top 10% branch change at IIT Kharagpur</li>
+        <li>Global Rank 197 / 6000+ – NK Securities Hackathon</li>
+        <li>Top 50 teams – Pan-IIT AI/ML Hackathon</li>
+    </ul>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section>
+    <h2>Education</h2>
+    <div class="card">
+        <b>IIT Kharagpur</b><br>
+        B.Tech (Hons.) Chemical Engineering <br>
+        Micro Specialization: Artificial Intelligence & Applications <br>
+        CGPA: 9.04
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    © 2026 Ayush Goel | Built with GitHub Pages
+</footer>
+
 </body>
 </html>
