@@ -1,401 +1,55 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-<meta charset="utf-8" /> 
-<meta name="viewport" content="width=device-width,initial-scale=1" /> 
-<title>Ayush Goel — Software Engineer | AI & Computer Vision</title> 
-<link rel="icon" type="image/png" href="logo.png">
-<meta name="description" content="Ayush Goel — Software Engineer & ML Researcher at IIT Kharagpur. Specialized in C++, Robotics, and Reinforcement Learning." /> 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"> 
-
-<style>
-:root {
---bg: #0b0d12;
---card-bg: rgba(255, 255, 255, 0.03);
---border: rgba(255, 255, 255, 0.08);
---accent: #2fb3ff;
---accent-glow: rgba(47, 179, 255, 0.3);
---text: #e6eef6;
---muted: #9fb0c3;
---maxw: 1200px;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-margin: 0;
-background: var(--bg);
-color: var(--text);
-font-family: 'Inter', -apple-system, sans-serif;
-line-height: 1.6;
--webkit-font-smoothing: antialiased;
-padding-top: 70px; /* Offset for sticky header */
-}
-
-/* --- Top Navigation Header --- */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  background: rgba(11, 13, 18, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.header nav {
-  display: flex;
-  gap: 30px;
-}
-.header nav a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  transition: 0.2s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.header nav a:hover {
-  color: var(--accent);
-}
-
-.wrap {
-max-width: var(--maxw);
-margin: 40px auto;
-padding: 0 28px;
-display: grid;
-grid-template-columns: 320px 1fr;
-gap: 40px;
-}
-
-/* --- Left Sidebar --- */
-.left {
-position: sticky;
-top: 110px;
-height: fit-content;
-display: flex;
-flex-direction: column;
-gap: 20px;
-}
-.avatar {
-width: 180px;
-height: 180px;
-border-radius: 20px;
-overflow: hidden;
-border: 1px solid var(--border);
-box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-.avatar img { width: 100%; height: 100%; object-fit: cover; }
-
-.identity h1 {
-font-size: 28px;
-margin: 0;
-color: var(--accent);
-letter-spacing: -0.5px;
-}
-.identity .tagline {
-font-size: 15px;
-color: var(--muted);
-margin-top: 4px;
-font-weight: 500;
-}
-.stats {
-background: var(--card-bg);
-border: 1px solid var(--border);
-padding: 15px;
-border-radius: 12px;
-font-size: 13px;
-}
-.stat-item {
-display: flex;
-justify-content: space-between;
-margin-bottom: 8px;
-}
-.stat-item:last-child { margin-bottom: 0; }
-.stat-label { color: var(--muted); }
-.stat-value { color: var(--text); font-weight: 600; }
-
-/* --- Action Button Group in Sidebar --- */
-.action-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
-}
-.social-row {
-  display: flex;
-  gap: 10px;
-}
-.social-btn {
-flex: 1;
-padding: 12px;
-border-radius: 8px;
-background: var(--card-bg);
-border: 1px solid var(--border);
-text-align: center;
-font-size: 13px;
-text-decoration: none;
-color: var(--text);
-transition: 0.2s;
-font-weight: 500;
-}
-.social-btn:hover {
-border-color: var(--accent);
-background: rgba(47, 179, 255, 0.05);
-transform: translateY(-2px);
-}
-
-.resume-btn {
-padding: 14px;
-text-align: center;
-font-size: 14px;
-font-weight: 700;
-border-radius: 10px;
-background: linear-gradient(135deg, #2fb3ff, #1d8ed8);
-color: #02131f;
-text-decoration: none;
-transition: 0.25s;
-box-shadow: 0 10px 25px rgba(47,179,255,0.25);
-}
-.resume-btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 15px 35px rgba(47,179,255,0.35);
-}
-
-/* --- Main Content --- */
-.section { margin-bottom: 50px; }
-h2.section-title {
-font-size: 14px;
-text-transform: uppercase;
-letter-spacing: 2px;
-color: var(--accent);
-margin-bottom: 24px;
-display: flex;
-align-items: center;
-gap: 15px;
-}
-h2.section-title::after {
-content: "";
-height: 1px;
-flex-grow: 1;
-background: var(--border);
-}
-
-.about-text { font-size: 16px; color: var(--muted); max-width: 75ch; }
-.about-text strong { color: var(--text); }
-
-.card {
-background: var(--card-bg);
-border: 1px solid var(--border);
-padding: 24px;
-border-radius: 16px;
-margin-bottom: 20px;
-transition: 0.3s;
-}
-.card:hover { border-color: rgba(47, 179, 255, 0.4); transform: translateY(-2px); }
-
-.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-.role-title { font-size: 18px; font-weight: 700; color: var(--text); }
-.org-meta { color: var(--accent); font-size: 14px; font-weight: 600; }
-.date-badge { font-family: 'Fira Code', monospace; font-size: 11px; color: var(--muted); }
-
-ul.bullets { padding-left: 18px; margin: 12px 0; color: var(--muted); font-size: 15px; }
-ul.bullets li { margin-bottom: 8px; }
-
-.tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.tag { font-family: 'Fira Code', monospace; font-size: 11px; color: var(--accent); background: rgba(47,179,255,0.1); padding: 4px 10px; border-radius: 4px; }
-
-.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-
-.ach-item { display: flex; gap: 15px; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 15px; color: var(--muted); }
-.ach-icon { color: var(--accent); font-weight: bold; }
-
-footer { padding: 40px 0; text-align: center; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 40px; }
-
-@media (max-width: 900px) {
-.header nav { gap: 15px; }
-.header nav a { font-size: 12px; }
-.wrap { grid-template-columns: 1fr; margin-top: 20px; }
-.left { position: relative; top: 0; align-items: center; text-align: center; }
-.projects-grid { grid-template-columns: 1fr; }
-}
-</style>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d14">
+  <meta name="description" content="Ayush Goel — software engineer at IIT Kharagpur building backend systems, algorithms, and applied AI products.">
+  <meta property="og:title" content="Ayush Goel — Software Engineer">
+  <meta property="og:description" content="Backend systems, algorithms, and applied AI—engineered with measurable performance.">
+  <meta property="og:type" content="website">
+  <title>Ayush Goel — Software Engineer</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#090d14;--surface:#101722;--surface-2:#141d2a;--line:rgba(255,255,255,.09);--text:#f5f7fa;--muted:#9ba9ba;--cyan:#59d5e0;--blue:#6ea8fe;--green:#7ee2a8;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:radial-gradient(800px 420px at 15% -5%,rgba(89,213,224,.11),transparent 60%),radial-gradient(700px 380px at 90% 10%,rgba(110,168,254,.10),transparent 55%),var(--bg);font-family:"DM Sans",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit}.shell{width:min(var(--max),calc(100% - 40px));margin:0 auto}.mono{font-family:"JetBrains Mono",monospace}
+    .nav{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);background:rgba(9,13,20,.82);backdrop-filter:blur(16px)}.nav-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{text-decoration:none;font-weight:700;letter-spacing:-.02em}.brand span{color:var(--cyan)}.nav-links{display:flex;gap:26px}.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600}.nav-links a:hover{color:var(--text)}
+    .hero{min-height:calc(100vh - 68px);display:grid;grid-template-columns:1fr 330px;gap:70px;align-items:center;padding:76px 0 82px}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--green);font-size:13px;font-weight:600;letter-spacing:.04em}.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px rgba(126,226,168,.65)}
+    h1{margin:20px 0 18px;max-width:850px;font-size:clamp(48px,7vw,82px);line-height:1.02;letter-spacing:-.055em}h1 em{display:block;color:transparent;font-style:normal;background:linear-gradient(90deg,var(--cyan),var(--blue));background-clip:text;-webkit-background-clip:text}.hero-copy{max-width:690px;margin:0 0 30px;color:var(--muted);font-size:clamp(18px,2.2vw,21px)}.actions{display:flex;flex-wrap:wrap;gap:12px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid var(--line);border-radius:10px;color:var(--text);background:var(--surface);text-decoration:none;font-size:14px;font-weight:700;transition:transform .2s,border-color .2s,background .2s}.button:hover{transform:translateY(-2px);border-color:rgba(89,213,224,.5)}.button.primary{color:#061015;border-color:transparent;background:linear-gradient(135deg,var(--cyan),#8be9ef)}
+    .portrait-wrap{position:relative;justify-self:center}.portrait-wrap::before{content:"";position:absolute;inset:-16px;border:1px solid rgba(89,213,224,.22);border-radius:50%}.portrait{display:block;width:min(300px,72vw);aspect-ratio:1;object-fit:cover;clip-path:circle(49.5% at 50% 50%);filter:grayscale(100%) contrast(1.03)}.portrait-tag{position:absolute;right:-18px;bottom:22px;padding:9px 12px;border:1px solid var(--line);border-radius:9px;color:var(--cyan);background:rgba(16,23,34,.94);font-size:12px;box-shadow:0 16px 35px rgba(0,0,0,.35)}
+    section{padding:90px 0;border-top:1px solid var(--line)}.section-head{display:grid;grid-template-columns:190px 1fr;gap:34px;margin-bottom:42px}.kicker{color:var(--cyan);font-size:13px}h2{margin:0;font-size:clamp(30px,4vw,45px);line-height:1.1;letter-spacing:-.035em}.section-intro{max-width:720px;margin:13px 0 0;color:var(--muted);font-size:17px}
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.metric{padding:24px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,var(--surface),rgba(16,23,34,.55))}.metric strong{display:block;color:var(--text);font-size:29px;letter-spacing:-.04em}.metric span{display:block;margin-top:5px;color:var(--muted);font-size:13px}
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{min-height:335px;display:flex;flex-direction:column;padding:26px;border:1px solid var(--line);border-radius:16px;background:var(--surface);text-decoration:none;transition:transform .25s,border-color .25s,background .25s}.project:hover{transform:translateY(-5px);border-color:rgba(89,213,224,.42);background:var(--surface-2)}.project-no{color:var(--cyan);font-size:12px}.project h3{margin:36px 0 11px;font-size:22px;letter-spacing:-.025em}.project p{margin:0;color:var(--muted);font-size:15px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:28px}.tag{padding:5px 8px;border-radius:6px;color:var(--blue);background:rgba(110,168,254,.08);font-size:11px}
+    .timeline{display:grid;gap:14px}.role{display:grid;grid-template-columns:230px 1fr;gap:32px;padding:25px 0;border-bottom:1px solid var(--line)}.role:last-child{border-bottom:0}.role-org{color:var(--cyan);font-size:14px;font-weight:700}.role h3{margin:0 0 8px;font-size:20px}.role p{margin:0;color:var(--muted)}.toolbox{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.toolbox div{padding:18px;border:1px solid var(--line);border-radius:12px;background:rgba(16,23,34,.65)}.toolbox strong{display:block;margin-bottom:7px;font-size:14px}.toolbox span{color:var(--muted);font-size:13px}
+    footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer-links{display:flex;gap:18px}.footer-links a{text-decoration:none}.footer-links a:hover{color:var(--text)}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;gap:55px;min-height:auto}.portrait-wrap{grid-row:1}.metrics,.project-grid,.toolbox{grid-template-columns:repeat(2,1fr)}.section-head,.role{grid-template-columns:1fr;gap:12px}}@media(max-width:620px){.shell{width:min(var(--max),calc(100% - 28px))}.nav-links a:not(:last-child){display:none}h1{font-size:49px}.hero{padding-top:50px}section{padding:68px 0}.metrics,.project-grid,.toolbox{grid-template-columns:1fr}.project{min-height:290px}.footer-inner{flex-direction:column}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important}}
+  </style>
 </head>
-
 <body>
-
-<header class="header">
-  <nav>
-    <a href="#about">01. About</a>
-    <a href="#experience">02. Experience</a>
-    <a href="#projects">03. Projects</a>
-    <a href="#achievements">04. Recognition</a>
-  </nav>
-</header>
-
-<div class="wrap">
-<aside class="left">
-
-<div class="avatar">
-<img src="assets/photo.png" alt="Ayush Goel" onerror="this.src='https://via.placeholder.com/180x180?text=AG'">
-</div>
-
-<div class="identity">
-<h1>Ayush Goel</h1>
-<div class="tagline">Software & ML Engineering</div>
-</div>
-
-<div class="stats">
-<div class="stat-item"><span class="stat-label">University</span><span class="stat-value">IIT Kharagpur</span></div>
-<div class="stat-item"><span class="stat-label">CGPA</span><span class="stat-value">9.04 / 10.0</span></div>
-<div class="stat-item"><span class="stat-label">Graduation</span><span class="stat-value">2027</span></div>
-</div>
-
-<div class="action-group">
-  <div class="social-row">
-    <a href="https://github.com/ayushgoel001" class="social-btn" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/ayush-goel-4b6469297" class="social-btn" target="_blank">LinkedIn</a>
-  </div>
-  
-  <a href="assets/Ayush_Goel_Resume.pdf" class="resume-btn" target="_blank">View Resume</a>
-
-  <a href="mailto:ayushgoel2005@kgpian.iitkgp.ac.in" class="social-btn" title="College Email">
-    College Email
-  </a>
-  <a href="mailto:ayushgoel.personal@gmail.com" class="social-btn" title="Personal Email">
-    Personal Email
-  </a>
-</div>
-
-</aside>
-
-<main class="main">
-    
-    <section class="section" id="about">
-      <h2 class="section-title">Overview</h2>
-      <div class="about-text">
-        <p>My name is <strong>Ayush Goel</strong> and I am a third-year undergraduate student from the <strong>Department of Chemical Engineering</strong> at <strong>IIT Kharagpur</strong>, pursuing a Micro-Specialization in <strong>Artificial Intelligence and Applications</strong>.</p>
-        <p>I bridge the gap between chemical process engineering and intelligent software systems. My expertise lies in building high-performance solutions using <strong>C++</strong>, developing <strong>Computer Vision</strong> pipelines, and architecting <strong>Reinforcement Learning</strong> environments.</p>
-      </div>
-      
-      <div class="tech-stack" style="margin-top:20px;">
-        <span class="tag">C++</span> <span class="tag">Python</span> <span class="tag">C</span> <span class="tag">SQL</span> 
-        <span class="tag">OOP</span> <span class="tag">Numpy</span> <span class="tag">OpenCV</span> <span class="tag">Tensorflow</span><span class="tag">ROS</span>
-      </div>
-    </section>
-
-    <section class="section" id="experience">
-      <h2 class="section-title">Experience</h2>
-      
-      <div class="card">
-        <div class="card-header">
-          <div>
-            <div class="role-title">Machine Learning Intern</div>
-            <div class="org-meta">Chi SquareX | Remote</div>
-          </div>
-          <span class="date-badge">Dec 2024 – Jan 2025</span>
-        </div>
-        <ul class="bullets">
-          <li>Built an RL-compatible trading environment using <strong>OpenAI Gymnasium</strong> with defined state/action spaces.</li>
-          <li>Trained agents using <strong>PPO and A2C</strong> algorithms based on profit/loss reward structures.</li>
-          <li>Developed Call Spread Butterfly strategy simulators using object-oriented design in Python.</li>
-          <li>Designed a <strong>Streamlit GUI</strong> to monitor and validate agent performance in market scenarios.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <div>
-            <div class="role-title">Undergraduate Researcher</div>
-            <div class="org-meta">Aerial Robotics Research Group | IIT Kharagpur</div>
-          </div>
-          <span class="date-badge">May 2024 – Sep 2025</span>
-        </div>
-        <ul class="bullets">
-          <li>Engineered real-time human detection using <strong>MediaPipe FaceMesh</strong> for aerial footage tracking.</li>
-          <li>Integrated <strong>YOLOv8</strong> for target and obstacle detection in autonomous drone perception tasks.</li>
-          <li>Built drone simulations in <strong>Gazebo</strong> using MAVROS for precise velocity-based navigation.</li>
-          <li>Designed gradient-based edge detection and <strong>Hough Line Transform</strong> algorithms for noisy environments.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" id="projects">
-      <h2 class="section-title">Selected Projects</h2>
-      <div class="projects-grid">
-        
-        <div class="card">
-          <h3>Rubik’s Cube Solver</h3>
-          <p style="font-size:14px; color:var(--muted);">High-performance C++ solver using <strong>Korf’s IDA* Algorithm</strong>. Features OOP principles, bitmasking, and achieves sub-10s solutions for complex scrambles.</p>
-          <div class="tech-stack">
-            <span class="tag">C++</span> <span class="tag">IDA*</span> <span class="tag">OOP</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Intelligent Path Planning</h3>
-          <p style="font-size:14px; color:var(--muted);">Implemented <strong>PRM (Probabilistic Roadmap)</strong> and <strong>A* Search</strong> using <strong>KD-Trees</strong> for collision-free navigation in 2D robotic environments.</p>
-          <div class="tech-stack">
-            <span class="tag">C++</span> <span class="tag">KD-Tree</span> <span class="tag">Algorithms</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Exam Surveillance System</h3>
-          <p style="font-size:14px; color:var(--muted);">Real-time monitoring using <strong>YOLOv8</strong> and dlib’s 68-point model to track pupil orientation and detect mobile usage during exams.</p>
-          <div class="tech-stack">
-            <span class="tag">Computer Vision</span> <span class="tag">Python</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Stereo Vision Depth Estimation</h3>
-          <p style="font-size:14px; color:var(--muted);">Built a custom depth estimation pipeline from scratch using two calibrated monocular cameras and template-matching algorithms.</p>
-          <div class="tech-stack">
-            <span class="tag">Stereo Geometry</span> <span class="tag">NumPy</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-<section class="section" id="achievements">
-  <h2 class="section-title">Achievements</h2>
-  <div class="card">
-    <div class="ach-item">
-      <span class="ach-icon">•</span>
-      <div><strong>Global Rank 197 / 6000+</strong> — NK Securities Research Hackathon 2025 (Volatility Modeling).</div>
+  <header class="nav"><div class="shell nav-inner"><a class="brand mono" href="#top">ayush<span>.dev</span></a><nav class="nav-links" aria-label="Primary navigation"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#toolkit">Toolkit</a><a href="https://github.com/ayushgoel001" target="_blank" rel="noreferrer">GitHub ↗</a></nav></div></header>
+  <main id="top">
+    <div class="shell hero">
+      <div><div class="eyebrow mono">Software engineering @ IIT Kharagpur</div><h1>Ayush Goel.<em>I build systems that perform.</em></h1><p class="hero-copy">Backend systems, algorithms, and applied AI—engineered around reliability, latency, throughput, and real-world usefulness.</p><div class="actions"><a class="button primary" href="#work">Explore selected work</a><a class="button" href="https://www.linkedin.com/in/ayush-goel-4b6469297/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="button" href="https://codeforces.com/profile/ayushgoel02" target="_blank" rel="noreferrer">Codeforces ↗</a></div></div>
+      <div class="portrait-wrap"><img class="portrait" src="assets/photo.png" alt="Portrait of Ayush Goel"><span class="portrait-tag mono">build → benchmark → improve</span></div>
     </div>
-    <div class="ach-item">
-      <span class="ach-icon">•</span>
-      <div><strong>Top 1% Rank</strong> — JEE Main 2023 (among 1.2M candidates).</div>
-    </div>
-    <div class="ach-item">
-      <span class="ach-icon">•</span>
-      <div><strong>Top 50 Rank</strong> — Pan-IIT AI/ML Hackathon (Convolve 3.0) among 4,000+ teams.</div>
-    </div>
-    <div class="ach-item">
-      <span class="ach-icon">•</span>
-      <div><strong>Branch Change Merit</strong> — Secured top 10% rank among 1,800 first-year students at IITKGP.</div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-</div>
-
-<footer>
-© <span id="year"></span> Ayush Goel · IIT Kharagpur · Built for Performance
-</footer>
-
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+    <section aria-labelledby="impact-title"><div class="shell"><div class="section-head"><div class="kicker mono">01 / IMPACT</div><div><h2 id="impact-title">Measured, not just shipped.</h2><p class="section-intro">I like engineering claims that can be tested. These are selected results from backend, document-intelligence, computer-vision, and algorithmic work.</p></div></div><div class="metrics"><div class="metric"><strong>164 RPS</strong><span>LLM gateway load test, zero failures</span></div><div class="metric"><strong>86.7%</strong><span>lower p50 latency with caching</span></div><div class="metric"><strong>75×</strong><span>faster repeat OCR extraction</span></div><div class="metric"><strong>1638</strong><span>Codeforces Expert peak rating</span></div></div></div></section>
+    <section id="work" aria-labelledby="work-title"><div class="shell"><div class="section-head"><div class="kicker mono">02 / SELECTED WORK</div><div><h2 id="work-title">Engineering across systems and intelligence.</h2><p class="section-intro">Three projects that best represent how I reason about architecture, algorithms, testing, and performance.</p></div></div><div class="project-grid">
+      <a class="project" href="https://github.com/ayushgoel001/ModelRoute" target="_blank" rel="noreferrer"><span class="project-no mono">01 — BACKEND SYSTEMS ↗</span><h3>ModelRoute</h3><p>A resilient multi-provider LLM API gateway with routing strategies, Redis caching, atomic rate limiting, fallback, PostgreSQL metrics, and load-tested performance.</p><div class="tags mono"><span class="tag">FastAPI</span><span class="tag">Redis</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></div></a>
+      <a class="project" href="https://github.com/ayushgoel001/proctorvision" target="_blank" rel="noreferrer"><span class="project-no mono">02 — APPLIED AI ↗</span><h3>ProctorVision</h3><p>A review-first vision platform that converts noisy frame detections into persistent behavioral alerts, with candidate tracking and 79 automated tests.</p><div class="tags mono"><span class="tag">FastAPI</span><span class="tag">YOLO</span><span class="tag">MediaPipe</span><span class="tag">pytest</span></div></a>
+      <a class="project" href="https://github.com/ayushgoel001/prm-astar-path-planning" target="_blank" rel="noreferrer"><span class="project-no mono">03 — ALGORITHMS ↗</span><h3>PRM + A*</h3><p>Deterministic robot motion planning using probabilistic roadmaps, KD-tree spatial search, collision validation, A*, and matched-seed RRT benchmarking.</p><div class="tags mono"><span class="tag">Python</span><span class="tag">SciPy</span><span class="tag">KDTree</span><span class="tag">A*</span></div></a>
+    </div></div></section>
+    <section id="experience" aria-labelledby="experience-title"><div class="shell"><div class="section-head"><div class="kicker mono">03 / EXPERIENCE</div><div><h2 id="experience-title">From research pipelines to production APIs.</h2></div></div><div class="timeline">
+      <article class="role"><div class="role-org mono">WASSERSTOFF</div><div><h3>Software Development Engineer Intern</h3><p>Built a FastAPI document-intelligence pipeline using Tesseract, Docling, OpenCV, Docker, caching, and concurrent processing; reduced character error rate from 0.481 to 0.080.</p></div></article>
+      <article class="role"><div class="role-org mono">MANCHESTER × LIVERPOOL</div><div><h3>Undergraduate Research Intern</h3><p>Engineered forecasting data and evaluation pipelines across 225 Zarr stores and more than 29 million grid-point predictions, adapting an 89.1M-parameter weather model.</p></div></article>
+      <article class="role"><div class="role-org mono">CHI SQUAREX</div><div><h3>Machine Learning Developer Intern</h3><p>Built an options-trading environment with Gymnasium and trained PPO/A2C agents using Stable-Baselines3, producing a 54.05% ten-month backtest return.</p></div></article>
+      <article class="role"><div class="role-org mono">IIT KHARAGPUR</div><div><h3>Undergraduate Researcher — Aerial Robotics</h3><p>Worked across ROS, Gazebo, MAVROS, perception algorithms, drone simulation, and autonomous-system tooling.</p></div></article>
+    </div></div></section>
+    <section id="toolkit" aria-labelledby="toolkit-title"><div class="shell"><div class="section-head"><div class="kicker mono">04 / TOOLKIT</div><div><h2 id="toolkit-title">Tools follow the problem.</h2></div></div><div class="toolbox"><div><strong>Core</strong><span>C++, C, Python, SQL, JavaScript</span></div><div><strong>Backend &amp; data</strong><span>FastAPI, Node.js, PostgreSQL, Redis, MongoDB</span></div><div><strong>Applied AI</strong><span>PyTorch, OpenCV, YOLO, MediaPipe, NumPy, SciPy</span></div><div><strong>Engineering</strong><span>Docker, Linux, GitHub Actions, pytest, Git</span></div></div></div></section>
+  </main>
+  <footer><div class="shell footer-inner"><span>© <span id="year"></span> Ayush Goel · Built with intent.</span><div class="footer-links"><a href="https://github.com/ayushgoel001" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/ayush-goel-4b6469297/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://modelroute.onrender.com/" target="_blank" rel="noreferrer">ModelRoute</a></div></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
