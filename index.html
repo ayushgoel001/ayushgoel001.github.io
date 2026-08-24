@@ -3,53 +3,161 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090d14">
-  <meta name="description" content="Ayush Goel — software engineer at IIT Kharagpur building backend systems, algorithms, and applied AI products.">
-  <meta property="og:title" content="Ayush Goel — Software Engineer">
-  <meta property="og:description" content="Backend systems, algorithms, and applied AI—engineered with measurable performance.">
+  <meta name="theme-color" content="#080d0c">
+  <meta name="description" content="Ayush Goel is a software engineer at IIT Kharagpur building reliable backend systems, algorithms, and applied AI products with measurable performance.">
+  <meta name="author" content="Ayush Goel">
+  <meta property="og:title" content="Ayush Goel | Software Engineering & AI">
+  <meta property="og:description" content="Backend systems, algorithms, and applied AI - engineered for reliability, speed, and measurable impact.">
   <meta property="og:type" content="website">
-  <title>Ayush Goel — Software Engineer</title>
-  <link rel="icon" type="image/png" href="logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#090d14;--surface:#101722;--surface-2:#141d2a;--line:rgba(255,255,255,.09);--text:#f5f7fa;--muted:#9ba9ba;--cyan:#59d5e0;--blue:#6ea8fe;--green:#7ee2a8;--max:1160px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:radial-gradient(800px 420px at 15% -5%,rgba(89,213,224,.11),transparent 60%),radial-gradient(700px 380px at 90% 10%,rgba(110,168,254,.10),transparent 55%),var(--bg);font-family:"DM Sans",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit}.shell{width:min(var(--max),calc(100% - 40px));margin:0 auto}.mono{font-family:"JetBrains Mono",monospace}
-    .nav{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);background:rgba(9,13,20,.82);backdrop-filter:blur(16px)}.nav-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{text-decoration:none;font-weight:700;letter-spacing:-.02em}.brand span{color:var(--cyan)}.nav-links{display:flex;gap:26px}.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600}.nav-links a:hover{color:var(--text)}
-    .hero{min-height:calc(100vh - 68px);display:grid;grid-template-columns:1fr 330px;gap:70px;align-items:center;padding:76px 0 82px}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--green);font-size:13px;font-weight:600;letter-spacing:.04em}.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px rgba(126,226,168,.65)}
-    h1{margin:20px 0 18px;max-width:850px;font-size:clamp(48px,7vw,82px);line-height:1.02;letter-spacing:-.055em}h1 em{display:block;color:transparent;font-style:normal;background:linear-gradient(90deg,var(--cyan),var(--blue));background-clip:text;-webkit-background-clip:text}.hero-copy{max-width:690px;margin:0 0 30px;color:var(--muted);font-size:clamp(18px,2.2vw,21px)}.actions{display:flex;flex-wrap:wrap;gap:12px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid var(--line);border-radius:10px;color:var(--text);background:var(--surface);text-decoration:none;font-size:14px;font-weight:700;transition:transform .2s,border-color .2s,background .2s}.button:hover{transform:translateY(-2px);border-color:rgba(89,213,224,.5)}.button.primary{color:#061015;border-color:transparent;background:linear-gradient(135deg,var(--cyan),#8be9ef)}
-    .portrait-wrap{position:relative;justify-self:center}.portrait-wrap::before{content:"";position:absolute;inset:-16px;border:1px solid rgba(89,213,224,.22);border-radius:50%}.portrait{display:block;width:min(300px,72vw);aspect-ratio:1;object-fit:cover;clip-path:circle(49.5% at 50% 50%);filter:grayscale(100%) contrast(1.03)}.portrait-tag{position:absolute;right:-18px;bottom:22px;padding:9px 12px;border:1px solid var(--line);border-radius:9px;color:var(--cyan);background:rgba(16,23,34,.94);font-size:12px;box-shadow:0 16px 35px rgba(0,0,0,.35)}
-    section{padding:90px 0;border-top:1px solid var(--line)}.section-head{display:grid;grid-template-columns:190px 1fr;gap:34px;margin-bottom:42px}.kicker{color:var(--cyan);font-size:13px}h2{margin:0;font-size:clamp(30px,4vw,45px);line-height:1.1;letter-spacing:-.035em}.section-intro{max-width:720px;margin:13px 0 0;color:var(--muted);font-size:17px}
-    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.metric{padding:24px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,var(--surface),rgba(16,23,34,.55))}.metric strong{display:block;color:var(--text);font-size:29px;letter-spacing:-.04em}.metric span{display:block;margin-top:5px;color:var(--muted);font-size:13px}
-    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{min-height:335px;display:flex;flex-direction:column;padding:26px;border:1px solid var(--line);border-radius:16px;background:var(--surface);text-decoration:none;transition:transform .25s,border-color .25s,background .25s}.project:hover{transform:translateY(-5px);border-color:rgba(89,213,224,.42);background:var(--surface-2)}.project-no{color:var(--cyan);font-size:12px}.project h3{margin:36px 0 11px;font-size:22px;letter-spacing:-.025em}.project p{margin:0;color:var(--muted);font-size:15px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:28px}.tag{padding:5px 8px;border-radius:6px;color:var(--blue);background:rgba(110,168,254,.08);font-size:11px}
-    .timeline{display:grid;gap:14px}.role{display:grid;grid-template-columns:230px 1fr;gap:32px;padding:25px 0;border-bottom:1px solid var(--line)}.role:last-child{border-bottom:0}.role-org{color:var(--cyan);font-size:14px;font-weight:700}.role h3{margin:0 0 8px;font-size:20px}.role p{margin:0;color:var(--muted)}.toolbox{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.toolbox div{padding:18px;border:1px solid var(--line);border-radius:12px;background:rgba(16,23,34,.65)}.toolbox strong{display:block;margin-bottom:7px;font-size:14px}.toolbox span{color:var(--muted);font-size:13px}
-    footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer-links{display:flex;gap:18px}.footer-links a{text-decoration:none}.footer-links a:hover{color:var(--text)}
-    @media(max-width:900px){.hero{grid-template-columns:1fr;gap:55px;min-height:auto}.portrait-wrap{grid-row:1}.metrics,.project-grid,.toolbox{grid-template-columns:repeat(2,1fr)}.section-head,.role{grid-template-columns:1fr;gap:12px}}@media(max-width:620px){.shell{width:min(var(--max),calc(100% - 28px))}.nav-links a:not(:last-child){display:none}h1{font-size:49px}.hero{padding-top:50px}section{padding:68px 0}.metrics,.project-grid,.toolbox{grid-template-columns:1fr}.project{min-height:290px}.footer-inner{flex-direction:column}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important}}
-  </style>
+  <meta property="og:url" content="https://ayushgoel001.github.io/">
+  <meta property="og:image" content="https://ayushgoel001.github.io/assets/og.png">
+  <meta property="og:image:width" content="1731">
+  <meta property="og:image:height" content="909">
+  <meta property="og:image:alt" content="Ayush Goel - Software Engineering and AI at IIT Kharagpur">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ayush Goel | Software Engineering & AI">
+  <meta name="twitter:description" content="Backend systems, algorithms, and applied AI - engineered for reliability, speed, and measurable impact.">
+  <meta name="twitter:image" content="https://ayushgoel001.github.io/assets/og.png">
+  <link rel="canonical" href="https://ayushgoel001.github.io/">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/main.js" defer></script>
+  <title>Ayush Goel | Software Engineer & AI | IIT Kharagpur</title>
 </head>
 <body>
-  <header class="nav"><div class="shell nav-inner"><a class="brand mono" href="#top">ayush<span>.dev</span></a><nav class="nav-links" aria-label="Primary navigation"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#toolkit">Toolkit</a><a href="https://github.com/ayushgoel001" target="_blank" rel="noreferrer">GitHub ↗</a></nav></div></header>
-  <main id="top">
-    <div class="shell hero">
-      <div><div class="eyebrow mono">Software engineering @ IIT Kharagpur</div><h1>Ayush Goel.<em>I build systems that perform.</em></h1><p class="hero-copy">Backend systems, algorithms, and applied AI—engineered around reliability, latency, throughput, and real-world usefulness.</p><div class="actions"><a class="button primary" href="#work">Explore selected work</a><a class="button" href="https://www.linkedin.com/in/ayush-goel-4b6469297/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="button" href="https://codeforces.com/profile/ayushgoel02" target="_blank" rel="noreferrer">Codeforces ↗</a></div></div>
-      <div class="portrait-wrap"><img class="portrait" src="assets/photo.png" alt="Portrait of Ayush Goel"><span class="portrait-tag mono">build → benchmark → improve</span></div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="site-grid" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-shell">
+      <a class="brand" href="#home" aria-label="Ayush Goel, home">
+        <span class="brand-mark" aria-hidden="true">AG</span>
+        <span class="brand-word">Ayush Goel</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
+        <a class="nav-contact" href="#contact">Let's talk</a>
+      </nav>
     </div>
-    <section aria-labelledby="impact-title"><div class="shell"><div class="section-head"><div class="kicker mono">01 / IMPACT</div><div><h2 id="impact-title">Measured, not just shipped.</h2><p class="section-intro">I like engineering claims that can be tested. These are selected results from backend, document-intelligence, computer-vision, and algorithmic work.</p></div></div><div class="metrics"><div class="metric"><strong>164 RPS</strong><span>LLM gateway load test, zero failures</span></div><div class="metric"><strong>86.7%</strong><span>lower p50 latency with caching</span></div><div class="metric"><strong>75×</strong><span>faster repeat OCR extraction</span></div><div class="metric"><strong>1638</strong><span>Codeforces Expert peak rating</span></div></div></div></section>
-    <section id="work" aria-labelledby="work-title"><div class="shell"><div class="section-head"><div class="kicker mono">02 / SELECTED WORK</div><div><h2 id="work-title">Engineering across systems and intelligence.</h2><p class="section-intro">Three projects that best represent how I reason about architecture, algorithms, testing, and performance.</p></div></div><div class="project-grid">
-      <a class="project" href="https://github.com/ayushgoel001/ModelRoute" target="_blank" rel="noreferrer"><span class="project-no mono">01 — BACKEND SYSTEMS ↗</span><h3>ModelRoute</h3><p>A resilient multi-provider LLM API gateway with routing strategies, Redis caching, atomic rate limiting, fallback, PostgreSQL metrics, and load-tested performance.</p><div class="tags mono"><span class="tag">FastAPI</span><span class="tag">Redis</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></div></a>
-      <a class="project" href="https://github.com/ayushgoel001/proctorvision" target="_blank" rel="noreferrer"><span class="project-no mono">02 — APPLIED AI ↗</span><h3>ProctorVision</h3><p>A review-first vision platform that converts noisy frame detections into persistent behavioral alerts, with candidate tracking and 79 automated tests.</p><div class="tags mono"><span class="tag">FastAPI</span><span class="tag">YOLO</span><span class="tag">MediaPipe</span><span class="tag">pytest</span></div></a>
-      <a class="project" href="https://github.com/ayushgoel001/prm-astar-path-planning" target="_blank" rel="noreferrer"><span class="project-no mono">03 — ALGORITHMS ↗</span><h3>PRM + A*</h3><p>Deterministic robot motion planning using probabilistic roadmaps, KD-tree spatial search, collision validation, A*, and matched-seed RRT benchmarking.</p><div class="tags mono"><span class="tag">Python</span><span class="tag">SciPy</span><span class="tag">KDTree</span><span class="tag">A*</span></div></a>
-    </div></div></section>
-    <section id="experience" aria-labelledby="experience-title"><div class="shell"><div class="section-head"><div class="kicker mono">03 / EXPERIENCE</div><div><h2 id="experience-title">From research pipelines to production APIs.</h2></div></div><div class="timeline">
-      <article class="role"><div class="role-org mono">WASSERSTOFF</div><div><h3>Software Development Engineer Intern</h3><p>Built a FastAPI document-intelligence pipeline using Tesseract, Docling, OpenCV, Docker, caching, and concurrent processing; reduced character error rate from 0.481 to 0.080.</p></div></article>
-      <article class="role"><div class="role-org mono">MANCHESTER × LIVERPOOL</div><div><h3>Undergraduate Research Intern</h3><p>Engineered forecasting data and evaluation pipelines across 225 Zarr stores and more than 29 million grid-point predictions, adapting an 89.1M-parameter weather model.</p></div></article>
-      <article class="role"><div class="role-org mono">CHI SQUAREX</div><div><h3>Machine Learning Developer Intern</h3><p>Built an options-trading environment with Gymnasium and trained PPO/A2C agents using Stable-Baselines3, producing a 54.05% ten-month backtest return.</p></div></article>
-      <article class="role"><div class="role-org mono">IIT KHARAGPUR</div><div><h3>Undergraduate Researcher — Aerial Robotics</h3><p>Worked across ROS, Gazebo, MAVROS, perception algorithms, drone simulation, and autonomous-system tooling.</p></div></article>
-    </div></div></section>
-    <section id="toolkit" aria-labelledby="toolkit-title"><div class="shell"><div class="section-head"><div class="kicker mono">04 / TOOLKIT</div><div><h2 id="toolkit-title">Tools follow the problem.</h2></div></div><div class="toolbox"><div><strong>Core</strong><span>C++, C, Python, SQL, JavaScript</span></div><div><strong>Backend &amp; data</strong><span>FastAPI, Node.js, PostgreSQL, Redis, MongoDB</span></div><div><strong>Applied AI</strong><span>PyTorch, OpenCV, YOLO, MediaPipe, NumPy, SciPy</span></div><div><strong>Engineering</strong><span>Docker, Linux, GitHub Actions, pytest, Git</span></div></div></div></section>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="availability"><span aria-hidden="true"></span>Open to software engineering opportunities</p>
+          <p class="hero-kicker">Software Engineering &amp; AI @ IIT Kharagpur</p>
+          <h1 id="hero-title">I build reliable systems that <em>perform under pressure</em></h1>
+          <p class="hero-summary">Backend systems, algorithms, and applied AI - engineered around reliability, latency, throughput, and real-world usefulness.</p>
+          <div class="hero-specialties" aria-label="Primary areas of expertise"><span>Backend Systems</span><span>Algorithms</span><span>Applied AI</span></div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View projects <span aria-hidden="true">↘</span></a>
+            <a class="button" href="assets/Ayush_Goel_Resume.pdf" target="_blank" rel="noreferrer">View résumé <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/ayushgoel001" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Engineering system status">
+          <div class="portrait-card">
+            <img src="assets/photo.png" alt="Portrait of Ayush Goel" width="826" height="830">
+            <div class="portrait-label"><span>Ayush Goel</span><small>Final-year undergraduate</small></div>
+          </div>
+          <div class="system-card">
+            <div class="system-card-head"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>system.profile</span><span class="status-pill">ONLINE</span></div>
+            <div class="system-lines" aria-hidden="true"><div><span>01</span><b>request</b><i></i><small>API</small></div><div><span>02</span><b>route</b><i></i><small>optimal</small></div><div><span>03</span><b>measure</b><i></i><small>p50 / p95</small></div></div>
+            <p><span class="prompt">$</span> build → benchmark → improve<span class="cursor"></span></p>
+          </div>
+        </div>
+      </div>
+      <div class="container hero-foot"><span>Scroll to inspect selected work</span><div aria-hidden="true"></div><span>IND / 2026</span></div>
+    </section>
+
+    <section class="impact-section" aria-labelledby="impact-title">
+      <div class="container">
+        <div class="section-heading compact reveal"><p class="section-index">01 / IMPACT</p><div><h2 id="impact-title">Measured, not just shipped</h2><p>Selected outcomes from systems, document intelligence, and algorithmic work.</p></div></div>
+        <div class="metrics-grid">
+          <a class="metric-card reveal" href="#modelroute"><span class="metric-value">164 <small>RPS</small></span><strong>LLM gateway throughput</strong><p>1,600-request benchmark with zero failures.</p><span class="metric-arrow" aria-hidden="true">↘</span></a>
+          <a class="metric-card reveal" href="#modelroute"><span class="metric-value">86.7<small class="metric-symbol">%</small></span><strong>Lower p50 latency</strong><p>Redis-cached requests: 81.2 ms → 10.8 ms.</p><span class="metric-arrow" aria-hidden="true">↘</span></a>
+          <a class="metric-card reveal" href="#wasserstoff"><span class="metric-value">75<small class="metric-symbol">×</small></span><strong>Faster repeat OCR</strong><p>SHA-256 extraction cache: 30.1 s → 0.4 s.</p><span class="metric-arrow" aria-hidden="true">↘</span></a>
+          <a class="metric-card reveal" href="#competitive-programming"><span class="metric-value">500<small class="metric-symbol">+</small></span><strong>Algorithmic problems</strong><p>Codeforces Expert with a 1638 peak rating.</p><span class="metric-arrow" aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="section-heading reveal"><p class="section-index">02 / ABOUT</p><div><h2 id="about-title">Software first<br>AI where it earns its place</h2></div></div>
+        <div class="about-copy reveal"><p class="lead">I’m a final-year undergraduate at IIT Kharagpur, pursuing a B.Tech. (Hons.) in Chemical Engineering with a Micro-specialization in Artificial Intelligence and Applications.</p><p>My core interests are software engineering, backend systems, algorithms, and system design. I’ve applied that foundation across machine learning, computer vision, reinforcement learning, document intelligence, climate forecasting, and robotics.</p><div class="principles" aria-label="Engineering principles"><div><span>01</span><strong>Design for failure</strong><small>Retries, fallback, observability</small></div><div><span>02</span><strong>Measure the system</strong><small>Latency, throughput, correctness</small></div><div><span>03</span><strong>Automate confidence</strong><small>Tests, CI, reproducible benchmarks</small></div></div></div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="section-index">03 / SELECTED WORK</p><div><h2 id="projects-title">Systems, intelligence,<br>and algorithmic depth</h2><p>Three projects that best represent how I think about architecture, performance, and reliability.</p></div></div>
+
+        <article class="project-feature project-flagship reveal" id="modelroute">
+          <div class="project-visual gateway-visual" aria-label="ModelRoute request-routing visualization">
+            <div class="visual-top"><span>MODELROUTE / LIVE TRACE</span><span class="live-dot">HEALTHY</span></div>
+            <div class="gateway-map" aria-hidden="true"><div class="gateway-client">REQ<span>POST /v1/chat</span></div><div class="flow-line line-a"><i></i></div><div class="gateway-router">ROUTER<small>latency-aware</small></div><div class="flow-line line-b"><i></i></div><div class="provider provider-a">OPENAI<span>ready</span></div><div class="provider provider-b">GEMINI<span>standby</span></div><div class="cache-node">REDIS<span>hit 90.6%</span></div><div class="db-node">POSTGRES<span>p50 / p95</span></div></div>
+            <div class="trace-row"><span>cache.hit</span><strong>10.8ms</strong><i></i><small>200 OK</small></div>
+          </div>
+          <div class="project-copy"><div class="project-meta"><span>01 / BACKEND SYSTEMS</span><span>FLAGSHIP PROJECT</span></div><h3>ModelRoute</h3><p class="project-subtitle">Resilient Multi-Provider LLM API Gateway</p><p class="project-description">A production-oriented gateway that keeps model traffic moving when providers slow down, fail, or hit limits.</p><ul class="engineering-list"><li>Three routing strategies across OpenAI and Gemini adapters with bounded retries and automatic fallback.</li><li>Async FastAPI handling, Redis caching, atomic Lua rate limiting, and PostgreSQL p50/p95 observability.</li></ul><div class="project-metrics"><span><strong>81.2 → 10.8 ms</strong>cached p50</span><span><strong>164 RPS</strong>peak throughput</span><span><strong>0 failures</strong>1,600 requests</span></div><div class="tech-row" aria-label="Technologies"><span>FastAPI</span><span>Redis</span><span>PostgreSQL</span><span>Docker</span><span>Async Python</span></div><a class="project-link" href="https://github.com/ayushgoel001/ModelRoute" target="_blank" rel="noreferrer">Explore repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="project-feature project-reverse reveal" id="proctorvision">
+          <div class="project-visual vision-visual" aria-label="ProctorVision candidate tracking visualization">
+            <div class="visual-top"><span>PROCTORVISION / REVIEW</span><span class="live-dot warning">3 EVENTS</span></div>
+            <div class="camera-frame" aria-hidden="true"><div class="scan-line"></div><div class="face-box"><span>PRIMARY · 0.94</span><i></i><i></i><i></i><i></i></div><div class="frame-corner c1"></div><div class="frame-corner c2"></div><div class="frame-corner c3"></div><div class="frame-corner c4"></div></div>
+            <div class="alert-stack"><span><i></i> gaze_away <b>02.4s</b></span><span><i></i> multiple_faces <b>cooldown</b></span><span><i></i> phone_detected <b>review</b></span></div>
+          </div>
+          <div class="project-copy"><div class="project-meta"><span>02 / SOFTWARE + VISION</span><span>REVIEW PLATFORM</span></div><h3>ProctorVision</h3><p class="project-subtitle">Vision-Guided Proctoring Review Platform</p><p class="project-description">A review-first computer-vision system that turns noisy frame detections into persistent, inspectable behavioral events.</p><ul class="engineering-list"><li>AlertEngine with five duration-aware rules, grace periods, and cooldown controls.</li><li>Primary-candidate tracking combines IoU, center distance, and area similarity; validated through CI.</li></ul><div class="project-metrics"><span><strong>~19%</strong>higher throughput</span><span><strong>279.4 → 234.9 ms</strong>frame latency</span><span><strong>79 tests</strong>automated validation</span></div><div class="tech-row" aria-label="Technologies"><span>FastAPI</span><span>MediaPipe</span><span>YOLO</span><span>OpenCV</span><span>GitHub Actions</span></div><a class="project-link" href="https://github.com/ayushgoel001/proctorvision" target="_blank" rel="noreferrer">Explore repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="project-feature reveal" id="motion-planning">
+          <div class="project-visual planner-visual" aria-label="PRM and A-star motion-planning visualization">
+            <div class="visual-top"><span>PRM / SEED 42</span><span class="live-dot">PATH FOUND</span></div>
+            <div class="planner-map" aria-hidden="true"><div class="obstacle obstacle-a"></div><div class="obstacle obstacle-b"></div><div class="obstacle obstacle-c"></div><span class="node n1"></span><span class="node n2"></span><span class="node n3"></span><span class="node n4"></span><span class="node n5"></span><span class="node n6"></span><span class="node n7"></span><span class="node n8"></span><i class="path p1"></i><i class="path p2"></i><i class="path p3"></i><i class="path p4"></i><i class="path p5"></i><i class="path p6"></i><i class="path p7"></i><b class="start">S</b><b class="goal">G</b></div>
+            <div class="planner-stats"><span>nodes <b>502</b></span><span>edges <b>5,312</b></span><span>search <b>1.5 ms</b></span></div>
+          </div>
+          <div class="project-copy"><div class="project-meta"><span>03 / ALGORITHMS + ROBOTICS</span><span>DETERMINISTIC BENCHMARKS</span></div><h3>Deterministic PRM + A*</h3><p class="project-subtitle">Sampling-Based Motion Planning &amp; Graph Search</p><p class="project-description">A reproducible planning stack that constructs collision-safe roadmaps and measures graph-search behavior against a goal-biased RRT baseline.</p><ul class="engineering-list"><li>PRM roadmap generation, KDTree neighbor search, conservative collision checking, and Euclidean A*.</li><li>Matched-seed PRM vs RRT evaluation across 60 planning attempts.</li></ul><div class="project-metrics"><span><strong>502 nodes</strong>500 samples + anchors</span><span><strong>1.5–19.6 ms</strong>A* search</span><span><strong>73 tests</strong>algorithm + pipeline</span></div><div class="tech-row" aria-label="Technologies"><span>Python</span><span>SciPy</span><span>NumPy</span><span>KDTree</span><span>A*</span><span>OpenCV</span></div><a class="project-link" href="https://github.com/ayushgoel001/prm-astar-path-planning" target="_blank" rel="noreferrer">Explore repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="container experience-layout"><div class="experience-intro reveal"><p class="section-index">04 / EXPERIENCE</p><h2 id="experience-title">Engineering across product and research</h2><p>Focused stories, not a résumé transcript: what I built, the constraints I worked with, and what changed.</p><a class="text-link" href="assets/Ayush_Goel_Resume.pdf" target="_blank" rel="noreferrer">Open full résumé <span aria-hidden="true">↗</span></a></div>
+        <div class="experience-list">
+          <article class="experience-card reveal" id="wasserstoff"><div class="experience-marker"><span>01</span></div><div class="experience-content"><div class="role-top"><div><p>Wasserstoff RJ Innovations Pvt. Ltd.</p><h3>Software Development Engineer Intern</h3></div><time>May – Jul 2026</time></div><p>Built a Python/FastAPI document-intelligence pipeline with Tesseract, Docling, OpenCV preprocessing, Docker, concurrent batch execution, and SHA-256 extraction caching.</p><div class="role-impact"><span><strong>83%</strong>CER reduction</span><span><strong>0.481 → 0.080</strong>character error rate</span><span><strong>75× faster</strong>repeat extraction</span></div></div></article>
+          <article class="experience-card reveal"><div class="experience-marker"><span>02</span></div><div class="experience-content"><div class="role-top"><div><p>University of Manchester × University of Liverpool</p><h3>Undergraduate Research Intern</h3></div><time>May – Jul 2026</time></div><p>Engineered Xarray/ERA5/ChaosBench pipelines for subseasonal Z500 and T850 forecasting, adapting ArchesWeather-S with a compact residual CNN head.</p><div class="role-impact"><span><strong>225</strong>daily Zarr stores</span><span><strong>0.23%</strong>parameters trained</span><span><strong>29M+</strong>predictions evaluated</span></div></div></article>
+          <article class="experience-card reveal"><div class="experience-marker"><span>03</span></div><div class="experience-content"><div class="role-top"><div><p>Chi SquareX Technologies</p><h3>Machine Learning Developer Intern</h3></div><time>Dec 2024 – Jan 2025</time></div><p>Designed an object-oriented options simulator in OpenAI Gymnasium and trained PPO/A2C policies with Stable-Baselines3 on ten months of ADANIPOWER options data.</p><div class="role-impact"><span><strong>54.05%</strong>historical backtest return</span><span><strong>48%</strong>win rate</span><span><strong>16%</strong>maximum drawdown</span></div><small class="disclaimer">Historical backtest results; not indicative of future performance.</small></div></article>
+          <article class="experience-card experience-minor reveal"><div class="experience-marker"><span>+</span></div><div class="experience-content"><div class="role-top"><div><p>Aerial Robotics Research Group, IIT Kharagpur</p><h3>Undergraduate Researcher</h3></div><time>May 2024 – Sep 2025</time></div><p>Worked across ROS, Gazebo, MAVROS, Iris drone simulation, keyboard-controlled 3D navigation, edge detection, and the Hough Line Transform.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="signal-section" id="competitive-programming" aria-labelledby="cp-title">
+      <div class="container signal-grid"><div class="cp-card reveal"><div class="cp-head"><p class="section-index">05 / ALGORITHMIC SIGNAL</p><span>CODEFORCES</span></div><div class="rating-block"><strong>1638</strong><span>Peak rating</span><em>EXPERT</em></div><h2 id="cp-title">500+ problems<br>One habit: reason precisely</h2><p>Problem-solving across Codeforces, LeetCode, AlgoZenith, and AtCoder, with notable global ranks of 1,863, 2,320, and 3,704 in rounds with 27K+ contestants.</p><a class="project-link" href="https://codeforces.com/profile/ayushgoel02" target="_blank" rel="noreferrer">View ayushgoel02 <span aria-hidden="true">↗</span></a></div>
+        <div class="rank-panel reveal" aria-label="Selected Codeforces global ranks"><div class="rank-axis"><span>SELECTED GLOBAL RANKS</span><span>LOWER IS BETTER</span></div><div class="rank-row"><span>#1,863</span><i style="--bar:86%"></i><small>27K+ field</small></div><div class="rank-row"><span>#2,320</span><i style="--bar:72%"></i><small>27K+ field</small></div><div class="rank-row"><span>#3,704</span><i style="--bar:54%"></i><small>27K+ field</small></div><div class="rank-footer"><span>C++</span><span>DSA</span><span>CONTESTS</span><span>500+</span></div></div></div>
+    </section>
+
+    <section class="skills-section" id="skills" aria-labelledby="skills-title"><div class="container"><div class="section-heading reveal"><p class="section-index">06 / TOOLKIT</p><div><h2 id="skills-title">Backend-weighted<br>Problem-driven</h2><p>I choose tools for reliability and fit, with strongest emphasis on software systems and backend engineering.</p></div></div><div class="skills-grid"><article class="skill-card skill-primary reveal"><div class="skill-head"><span>CORE / BACKEND</span><b>01</b></div><h3>Systems I reach for first</h3><div class="skill-cloud"><strong>Python</strong><strong>C++</strong><strong>FastAPI</strong><strong>PostgreSQL</strong><strong>Redis</strong><strong>REST APIs</strong><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>SQL</span><span>JavaScript</span><span>C</span></div></article><article class="skill-card reveal"><div class="skill-head"><span>ENGINEERING / DEVOPS</span><b>02</b></div><h3>Shipping with confidence</h3><div class="skill-cloud"><strong>Linux</strong><strong>Docker Compose</strong><strong>GitHub Actions</strong><strong>pytest</strong><span>Git</span><span>GitHub</span><span>Postman</span></div></article><article class="skill-card reveal"><div class="skill-head"><span>APPLIED AI</span><b>03</b></div><h3>Intelligence as a capability</h3><div class="skill-cloud"><strong>PyTorch</strong><strong>OpenCV</strong><strong>NumPy</strong><strong>SciPy</strong><span>MediaPipe</span><span>YOLO</span><span>Hugging Face</span><span>Xarray</span><span>Stable-Baselines3</span></div></article></div></div></section>
+
+    <section class="achievements-section" id="achievements" aria-labelledby="achievements-title"><div class="container achievements-grid"><div class="section-heading reveal"><p class="section-index">07 / RECOGNITION</p><div><h2 id="achievements-title">Small section<br>Strong signal</h2></div></div><div class="achievement-list"><article class="achievement reveal"><span class="achievement-rank">#07</span><div><p>Convolve 4.0 · Pan-IIT AI/ML Hackathon</p><h3>All-India Rank 7 in Round 1</h3><small>National inter-IIT machine-learning competition.</small></div><span class="achievement-year">2026</span></article><article class="achievement reveal"><span class="achievement-rank">#22</span><div><p>Optiver Quantitative Trade-a-thon 2026</p><h3>Real-time market making and pricing</h3><small>Designed strategies under dynamic simulated market conditions.</small></div><span class="achievement-year">2026</span></article></div></div></section>
+
+    <section class="focus-section" aria-labelledby="focus-title"><div class="container focus-card reveal"><p class="section-index">CURRENT FOCUS / NOW</p><h2 id="focus-title">Building depth in scalable backend systems, distributed-system fundamentals, and production-grade software engineering</h2><div class="focus-row"><span>System Design</span><span>APIs</span><span>Algorithms</span><span>OOP / LLD</span><span>OS</span><span>DBMS</span><span>Networking</span><span>Applied AI</span></div></div></section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-grid"><div class="contact-copy reveal"><p class="section-index">08 / CONTACT</p><h2 id="contact-title">Let’s build something<br>that holds up</h2><p>I’m interested in software engineering, backend, and applied AI opportunities where thoughtful systems work matters.</p></div><div class="contact-actions reveal"><a class="contact-primary" href="mailto:goel85360@gmail.com"><span>Start a conversation</span><strong>goel85360@gmail.com</strong><i aria-hidden="true">↗</i></a><div class="contact-links"><a href="https://www.linkedin.com/in/ayush-goel-4b6469297/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/ayushgoel001" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://codeforces.com/profile/ayushgoel02" target="_blank" rel="noreferrer">Codeforces ↗</a></div></div></div></section>
   </main>
-  <footer><div class="shell footer-inner"><span>© <span id="year"></span> Ayush Goel · Built with intent.</span><div class="footer-links"><a href="https://github.com/ayushgoel001" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/ayush-goel-4b6469297/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://modelroute.onrender.com/" target="_blank" rel="noreferrer">ModelRoute</a></div></div></footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+
+  <footer class="site-footer"><div class="container footer-inner"><span>Designed &amp; built by Ayush Goel.</span><span>© <span id="year"></span> · IIT Kharagpur</span><a href="#top">Back to top ↑</a></div></footer>
 </body>
 </html>
